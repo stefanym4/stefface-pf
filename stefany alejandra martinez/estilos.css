@@ -1,0 +1,373 @@
+header {
+  background-image: url(../imagenes/WhatsApp\ Image\ 2023-03-28\ at\ 8.14.02\ PM.jpeg);
+  color: #000000;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 1.0em;
+}
+
+nav li {
+  margin-left: 1rem;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+header img{
+  width: 300px;
+  height: 85px;
+}
+/* formulario */
+
+form {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"], input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  width: 100%;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Elimina los controles de flecha para la vida útil de los navegadores */
+}
+
+/* Estilos para el botón de aplicación de descuento */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilos para el campo de entrada de precio con descuento */
+#precioConDescuento {
+  background-color: #f7f7f7;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+}
+#precioConDescuento:focus {
+  outline: none;
+}
+/*continuando con la compra*/
+.container{
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
+}
+.header-section{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  position: relative;
+}
+.header-section div{
+  position: relative;
+}
+.header-section p{
+  position: absolute;
+  top: -24px;
+  right: -8px;
+  background-color: #f4f4f4;
+  padding: 1px 6px;
+  border-radius: 50%;
+  color: red;
+  font-weight: 700;
+  font-family: system-ui;
+  line-height: 18px;
+}
+
+.cart{
+  width: 39px;
+  height: 38px;
+}
+.cart-products{
+  position: absolute!important;
+  top: 82px;
+  right: -18px;
+  background-color: #ffffff;
+  padding: 0 18px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  display: none;
+
+  min-width: 290px;
+}
+
+.cart:hover{
+  margin-bottom: 16px;
+  transition-duration: .5s;
+}
+
+/*end header*/
+.products{
+  padding-top: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.carts{
+  max-width: 250px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  padding-bottom: 34px;
+  margin-bottom: 40px;
+}
+.carts img{
+  width: 100%;
+}
+.carts p{
+  font-family: system-ui;
+  font-weight: 500;
+  padding: 0 20px;
+  margin-bottom: 24px;
+}
+.carts div p{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background-color: rgb(0, 235, 129);
+  color: #fff;
+  padding: 2px 7px 4px 21px;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+.carts div{
+  position: relative;
+}
+.carts a{
+  font-family: system-ui;
+  text-decoration: none;
+  background: red;
+  padding: 9px 23px;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.carts a:hover{
+  background: #fff;
+  color: red;
+  border: solid 2px red;
+  transition-duration: .3s;
+}
+
+/*float cart*/
+.cart-products .item img{
+  width: 100px;
+}
+
+.cart-products .item{
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2px red;
+}
+.cart-products .item .item-content{
+  margin: 0 19px;
+  width: 201px;
+}
+.cart-products .item .item-content h5{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: system-ui;
+}
+.cart-products .item .item-content h6{
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: system-ui;
+}
+.cart-products .item span{
+  background-color: red;
+  padding: 0px 5px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: system-ui;
+  cursor: pointer;
+}
+.cart-products h3{
+  margin-bottom: 0;
+}
+.cart-products .item .item-content h5.cart-price{
+  font-weight: 700;
+}
+
+/*main*/
+
+h1{
+  text-align: center;
+}
+ 
+/*footer*/
+footer {
+  background-image: url(../imagenes/WhatsApp\ Image\ 2023-03-28\ at\ 8.14.02\ PM.jpeg);
+  padding: 1em 0;
+  text-align: center;
+}
+
+footer.botones a {
+  padding: 0 10px;
+  line-height: 5px;
+  border-bottom: 7px solid;color:  #000000; 
+}
+
+ 
+      
+ footer a:hover{
+          background-color: #e1b1e8;
+      
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+
+
+  body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.pdes{
+  text-align: center;
+}
+
+.p-d{
+  text-align: center;
+  font-size: larger;
+  
+}
+/*estilo de la pagina somos stef face*/
+ /* Formulario de registro */
+ #registroForm {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Formulario de inicio de sesión */
+#loginForm {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Campos de entrada */
+input[type=text], input[type=password] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+/* Botones */
+input[type=button] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Estilo para el mensaje de alerta */
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+/* Estilo para el formulario de mensaje de alerta */
+#alertForm {
+  margin: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Estilo para el campo de mensaje de alerta */
+#alertMsg {
+  margin: 0;
+  padding: 20px;
+  border: none;
+  background-color: transparent;
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* Página de inicio */
+#inicio {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Estilo para el mensaje de bienvenida */
+.hola {
+  font-size: 24px;
+  font-weight: bold;
+}
+

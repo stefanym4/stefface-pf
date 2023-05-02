@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="./scrip.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ <link rel="shortcut icon" href="./img/c0e503_de2dca2a53a040aeb0747ef25874601d_mv2.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header-section container">
+      <img src="../imagenes/WhatsApp Image 2023-03-28 at 6.19.34 PM.jpeg" alt="">
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">TIENDA
+
+            </a></li>
+          <li><a href="./descuento.html">DESCUENTO</a></li>
+          <li><a href="#">NOSOTROS</a></li>
+          <li><a href="./somos.html">SOMOS STEF FACE</a></li>
+        </ul>
+
+      </nav>
+
+      <div>
+        <img onclick="showCart(this)" class="cart"
+          src="https://w7.pngwing.com/pngs/216/339/png-transparent-bag-computer-icons-bag-rectangle-accessories-reusable-shopping-bag.png"
+          alt="">
+        <p class="count-product">0</p>
+      </div>
+      <div class="cart-products" id="products-id">
+        <p class="close-btn" onclick="closeBtn()">X</p>
+        <h3>Mi carrito</h3>
+        <div class="card-items">
+        </div>
+        <h2>Total: $<strong class="price-total">0</strong></h2>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    
+    <div>
+      <h1>tienda de productos</h1>
+    </div>
+    <section class="container">
+      <div class="products">
+        <div class="carts">
+          <div>
+            <img src="https://luegopago.blob.core.windows.net/temporary/202302041146600.jpg" alt="">
+            <p><span>15.000</span>$cop</p>
+          </div>
+          <p class="title">Tonico con vitamina c de la marca bioaqua</p>
+          <a href="" data-id="1" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img
+              src="https://pacardylwpmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/07/15192053/7891010882983.jpg"
+              alt="">
+            <p><span>23.000</span>$cop</p>
+          </div>
+          <p class="title">Crema hidratante de la marca neutrogena </p>
+          <a href="" class="btn-add-cart" data-id="2">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img
+              src="https://medipielsa.vtexassets.com/arquivos/ids/179142-800-auto?v=638043865010070000&width=800&height=auto&aspect=true"
+              alt="">
+            <p><span>84.000</span>$cop</p>
+          </div>
+          <p class="title"> Crema hidratante de la marca cetaphil</p>
+          <a href="" data-id="3" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img
+              src="https://copservir.vtexassets.com/arquivos/ids/782201/CETAPHIL-LIMPIADOR-PIEL-GRASA_F.png?v=637952378532430000"
+              alt="">
+            <p><span>54.000</span>$cop</p>
+          </div>
+          <p class="title"> Limpiador de la marca cetaphil</p>
+          <a href="" data-id="4" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img
+              src="data:image/jpeg;base64,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/X1VLooCnSAc0UgMgy5payQABmOtyPVWKuKox2nNNswG2bQZDRJO0DpvSj257osDPffXdNh6FIqDQjUXzXIngRay+UcXSqHK1zXGM2X70AiHAHddpB0uIU4pic0XIid8KaEmHbDrACXTbfbU96vKnS2griCKptN8HfRSHRRVdpvg76KU6IMTpTQrnMN9qPjyXRdK6Fc5hz70+DuS0jt+jB7ml/jp/hCsqHBCKdMcGM/CFMsqIiICIiAiIgIiICIiAiIgIiICIiCPEbLvK7kudxWGY+Q9gdIgyLx4rosRsO8ruSwnqwfcPhGGmaeXsDqxl1ENDSAZ1Ft680OhqDW5Q10RB95UzESDDnAy64m5Op4qxhd/+v4QrIQVqOApsf1jQQcpbGYlsEgzffZo7g0AQFbXwL6g90toK4qdLaHirighrat+KkOijr6t8fopDogw+ltCuboHtu8j+S6PpfQrmqO1U8j+S0j9BoiGtHcOS9oEWVEREBERAREQEREBERAREQEREBERB8c2QQd4hZ1fo0/dd8D+q0kQZeHwzxMt4cP6QpxQdw+YV1EFQYd3cvQw54hWUQQsoQZlTIiCOqyY7jPyI+q+k20K9ogx+kcJUfOVv0WXgvZ+tmJdlAIjWT6BdYiuwREUBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/9k="
+              alt="">
+            <p><span>10.000</span>$cop</p>
+          </div>
+          <p class="title"> Contorno de ojos de arroz de la marca bioaqua</p>
+          <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img src="https://maquillajemedellin.com/wp-content/uploads/2021/08/Serum-acido-hialuronico-bioaqua.png"
+              alt="">
+            <p><span>13.000</span>$cop</p>
+          </div>
+          <p class="title"> Serum con acido hialuronico marca bioaqua</p>
+          <a href="" data-id="6" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img
+              src="https://dumashe.com/wp-content/uploads/2021/10/Tonico-de-Agua-de-Rosas-by-Bioaqua-foto-principal.jpg"
+              alt="">
+            <p><span>8.000</span>$cop</p>
+          </div>
+          <p class="title"> Tonico de agua de rosas de bioaqua</p>
+          <a href="" data-id="7" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img src="https://falabella.scene7.com/is/image/FalabellaCO/22352187_1?wid=800&hei=800&qlt=70" alt="">
+            <p><span>43.000</span>$cop</p>
+          </div>
+          <p class="title"> Serum marca the ordinary</p>
+          <a href="" data-id="8" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img src="https://feliciamakeup.com.co/wp-content/uploads/2023/01/070601.jpg" alt="">
+            <p><span>10.000</span>$cop</p>
+          </div>
+          <p class="title"> Balsamo hidratante de bioaqua</p>
+          <a href="" data-id="9" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img src="https://e00-telva.uecdn.es/assets/multimedia/imagenes/2019/04/26/15562783855813.jpg" alt="">
+            <p><span>15.000</span>$cop</p>
+          </div>
+          <p class="title"> Serum de pestañas de loreal paris</p>
+          <a href="" data-id="10" class="btn-add-cart">add to cart</a>
+        </div>
+        <div class="carts">
+          <div>
+            <img
+              src="https://statictrendy.s3.amazonaws.com/wp-content/uploads/2022/08/04091856/serum-de-pestan%CC%83as-trendy-2.jpg"
+              alt="">
+            <p><span>18.000</span>$</p>
+          </div>
+          <p class="title"> serum de pestañas de trendy</p>
+          <a href="" data-id="11" class="btn-add-cart">add to cart</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+      function showCart(x) {
+        document.getElementById("products-id").style.display = "block";
+      }
+      function closeBtn() {
+        document.getElementById("products-id").style.display = "none";
+      }
+
+      
+  
+
+    </script>
+   
+  </main>
+
+  <footer class="pie-pagina">
+    <h6>nuestras redes sociales</h6>
+    <div class="botones">
+
+      <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwju8equiKn6AhUQPIYKHYSAAekYABAAGgJ2dQ&ohost=www.google.com&cid=CAESbOD2rtJhmlPk1hTIwv-0g68u7ykjtMpimE0UkJltae4NaL_VCSUhKWpfQoF5dvHA8NonnY338_YXflFBfBoHDuGhxYRTJ3I2ZanT0Of5hMGaVeBIsUfjkL_G1PefjctOs3q7g9CbyNAKY-H4MQ&sig=AOD64_1tcXvVT0KxA4q5tzWIEg6ptIxEBg&q&adurl&ved=2ahUKEwiem-SuiKn6AhUHSjABHXYhCikQ0Qx6BAgEEAE"
+        target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+
+      <a href="https://www.youtube.com/" target="_blank"><i class='bx bxl-youtube'></i></a>
+
+      <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+
+      <a href="https://www.google.com/?hl=es" target="_blank"><i class='bx bxl-google'></i></a>
+
+      <a href="https://twitter.com/?lang=es" target="_blank"> <i class='bx bxl-twitter'></i></a>
+
+    </div>
+    
+  </footer>
+  <script src="./scrip.js"></script>
+
+</body>
+
+</html>
